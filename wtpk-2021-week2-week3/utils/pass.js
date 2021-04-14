@@ -36,7 +36,8 @@ passport.use(new JWTStrategy)({
     const user = await userModel.getUser(jwPayload.user_id);
     return done(null, user);
   } catch (err){
-    return done(err);
+    return done
+    (err);
   }
   }
 
